@@ -7,8 +7,8 @@ const Kucing = require("../models/Kucing");
 router.post("/", async (req, res) => {
   // tampung input
   const kucingPost = new Kucing({
-    namaTempat: req.body.namaBarang,
-    lokasi: req.body.harga,
+    namaTempat: req.body.namaTempat,
+    lokasi: req.body.lokasi,
     deskripsi: req.body.deskripsi,
     nomorHP: req.body.nomorHP,
     urlLokasi: req.body.urlLokasi,
@@ -38,8 +38,8 @@ router.get("/", async (req, res) => {
 router.put("/:kucingId", async (req, res) => {
   // tampung input kontent
   const data = {
-    namaTempat: req.body.namaBarang,
-    lokasi: req.body.harga,
+    namaTempat: req.body.namaTempat,
+    lokasi: req.body.lokasi,
     deskripsi: req.body.deskripsi,
     nomorHP: req.body.nomorHP,
     urlLokasi: req.body.urlLokasi,
